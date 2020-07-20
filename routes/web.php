@@ -17,6 +17,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/home', 'HomeController@index');
+
 Route::prefix('user')->group(function() {
 
     Route::post('eat', 'UsersController@eatUsers')->name('eatUsers');
